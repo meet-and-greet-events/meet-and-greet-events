@@ -12,6 +12,11 @@
         <!-- Bootstrap Icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+            rel="stylesheet">
     </head>
 
     <body>
@@ -49,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#why-choose-us">Why Choose Us?</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
@@ -58,39 +63,35 @@
             </div>
         </nav>
 
-        <!-- Home Section -->
-        <section id="home">
+        <!-- Home Section (Hero + About Combined) -->
+        <section id="home" class="home-hero">
             <div class="container">
-                <h1>Meet and Greet Events</h1>
-                <p>Seamless Event Registration & On‑Site Management Solutions</p>
-            </div>
-        </section>
+                <div class="row align-items-center min-vh-100">
 
-        <!-- About Section -->
-        <section id="about" class="bg-light shadow-lg">
-            <div class="container">
-                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+                        <h1 class="display-4 fw-bold text-primary">
+                            Meet and Greet Events
+                        </h1>
 
-                    <!-- Image Column -->
-                    <div class="col-lg-5 mb-4 mb-lg-0">
-                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Event Management"
-                            class="img-fluid rounded shadow-sm">
+                        <p class="lead mt-3 mb-4">
+                            Seamless Event Registration & On-Site Management Solutions
+                        </p>
+
+                        <p class="fs-5 text-muted">
+                            Meet &amp; Greet delivers end-to-end registration technology and on-site event
+                            management for conferences, exhibitions, and corporate events. From online
+                            registration setup to instant badge issuance and real-time reporting, we
+                            empower organizers to deliver seamless, well-coordinated experiences with
+                            complete confidence.
+                        </p>
+
                     </div>
 
-                    <!-- Text Column -->
-                    <div class="col-lg-7">
-                        <h2 class="mb-4 text-primary">About Us</h2>
-
-                        <div class="section-progress">
-                            <span class="progress-line"></span>
-                        </div>
-
-                        <p class="lead mb-0">
-                            Meet & Greet delivers end-to-end registration technology and on-site event management for
-                            conferences, exhibitions, and corporate events. Managing every stage of the registration
-                            journey — from online registration setup to on-site badge issuance and real-time reporting —
-                            we empower organizers to run streamlined, well-coordinated events with complete confidence.
-                        </p>
+                    <!-- Right Image -->
+                    <div class="col-lg-6 text-center">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Event Management"
+                            class="img-fluid rounded-4 shadow-lg">
                     </div>
 
                 </div>
@@ -100,7 +101,7 @@
         <!-- Why Choose Us Section -->
         <section id="why-choose-us" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-primary text-center mb-3">Why Choose Us</h2>
+                <h2 class="text-primary text-center mb-3">Why Choose Us?</h2>
 
                 <div class="section-progress mx-auto">
                     <span class="progress-line"></span>
@@ -340,56 +341,15 @@
         </div>
 
 
+        <!-- Custom Cursor -->
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener("scroll", () => {
-                document.querySelectorAll("section").forEach(section => {
-                    const progressBar = section.querySelector(".progress-line");
-                    if (!progressBar) return;
 
-                    const rect = section.getBoundingClientRect();
-                    const windowHeight = window.innerHeight;
-
-                    const sectionHeight = rect.height;
-                    const visible = Math.min(
-                        Math.max(windowHeight - rect.top, 0),
-                        sectionHeight
-                    );
-
-                    const progress = (visible / sectionHeight) * 100;
-                    progressBar.style.width = `${progress}%`;
-                });
-            });
-
-
-            const scrollBtn = document.getElementById("scrollTopBtn");
-            const progressCircle = document.getElementById("progressCircle");
-
-            const radius = 26;
-            const circumference = 2 * Math.PI * radius;
-
-            progressCircle.style.strokeDasharray = circumference;
-            progressCircle.style.strokeDashoffset = circumference;
-
-            window.addEventListener("scroll", () => {
-                const scrollTop = window.scrollY;
-                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-                const progress = scrollTop / scrollHeight;
-                const offset = circumference - progress * circumference;
-
-                progressCircle.style.strokeDashoffset = offset;
-
-                scrollBtn.style.display = scrollTop > 200 ? "block" : "none";
-            });
-
-            scrollBtn.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
-        </script>
-
+        <!-- Custom CSS -->
+        <script src="./script.js"></script>
     </body>
 
 </html>
