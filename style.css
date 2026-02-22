@@ -1,0 +1,259 @@
+:root {
+    --primary-blue: #0d6efd;
+    --light-blue: #e7f1ff;
+    --dark-blue: #0a58ca;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: white;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.nav-link {
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--primary-blue);
+}
+
+/* Hero Section */
+#home {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--light-blue), white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+#home p {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* Section spacing */
+section {
+    padding: 80px 0;
+}
+
+/* Service Cards – Rectangular Clean Style */
+.service-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+    height: 100%;
+    padding: 10px;
+}
+
+/* Hover effect (subtle lift like reference) */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Card body spacing */
+.service-card .card-body {
+    padding: 2.5rem;
+}
+
+/* Service number */
+.service-number {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Title */
+.service-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* Text */
+.service-card .card-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Gallery */
+.gallery img {
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    color: white;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    color: color(--dark-blue);
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--light-blue);
+}
+
+/* Contact form */
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+}
+
+/* Section Progress Bar */
+.section-progress {
+    width: 100%;
+    height: 4px;
+    background-color: #e0eafc;
+    overflow: hidden;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+.section-progress .progress-line {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #0d6efd, #6ea8fe);
+    transition: width 0.2s ease-out;
+}
+
+
+/* Scroll To Top Button*/
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    font-weight: bold;
+}
+
+#scrollTopBtn span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+#scrollTopBtn svg {
+    transform: rotate(-90deg);
+}
+
+#scrollTopBtn circle {
+    fill: none;
+    stroke-width: 5;
+}
+
+#scrollTopBtn circle:first-child {
+    stroke: #e0eafc;
+}
+
+#progressCircle {
+    stroke: url(#scrollGradient);
+    stroke-dasharray: 163;
+    stroke-dashoffset: 163;
+    transition: stroke-dashoffset 0.2s linear;
+}
+
+#boundaryCircle {
+    stroke: white;
+}
+
+#scrollTopBtn:hover {
+    transform: scale(1.1);
+}
+
+/* Why Choose Us Cards */
+.why-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(13, 110, 253, 0.25);
+}
+
+/* Icon */
+.why-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Title */
+.why-card h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Text */
+.why-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+    height: 44px;
+    width: auto;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
