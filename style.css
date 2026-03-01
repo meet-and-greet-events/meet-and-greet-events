@@ -75,11 +75,16 @@ h6,
     width: 100%;
 }
 
+/* Hover / active state */
+.navbar-nav .nav-link:hover {
+    color: #6610f2;
+}
+
 /* ===============================
    MOBILE NAVBAR IMPROVEMENTS
    =============================== */
 
-@media (min-width:360px) and (max-width: 992px) {
+@media (max-width: 992px) {
 
     /* Collapse container */
     .navbar-collapse {
@@ -96,6 +101,10 @@ h6,
         gap: 0.75rem;
     }
 
+    .navbar-nav .nav-link:hover {
+        transform: translateX(4px);
+    }
+
     /* Menu links */
     .navbar-nav .nav-link {
         font-size: 1.1rem;
@@ -105,12 +114,6 @@ h6,
         text-align: center;
         position: relative;
         transition: all 0.3s ease;
-    }
-
-    /* Hover / active state */
-    .navbar-nav .nav-link:hover {
-        color: #6610f2;
-        transform: translateX(4px);
     }
 
     /* Accent underline */
@@ -139,6 +142,10 @@ h6,
     .navbar-logo {
         height: 42px;
     }
+
+    .home-hero {
+        padding-top: 128px;
+    }
 }
 
 /* ===============================
@@ -161,7 +168,6 @@ h6,
    Hero Section
 ========================== */
 .home-hero {
-    height: 100vh;
     background:
         radial-gradient(circle at top right, rgba(214, 51, 132, 0.12), transparent 40%),
         linear-gradient(135deg, #e7f1ff, #ffffff);
@@ -283,7 +289,7 @@ section {
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 25px 50px rgba(13, 110, 253, 0.25);
 }
 
 .service-card .card-body {
@@ -326,6 +332,66 @@ section {
 /* ==========================
    Contact
 ========================== */
+/* Contact Cards */
+.contact-info-card,
+.contact-form-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Contact Info Items */
+.contact-info-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.contact-info-item .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+.contact-info-item h6 {
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+/* Social Icons */
+.social-links a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f1f3f5;
+    color: #0d6efd;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: linear-gradient(135deg, #0d6efd, #d63384);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Form Inputs */
+.contact-form-card .form-control,
+.contact-form-card .form-select {
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+}
+
 .form-control:focus {
     border-color: var(--primary-blue);
     box-shadow: none;
