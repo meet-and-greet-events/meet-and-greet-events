@@ -190,6 +190,10 @@ h6,
     margin: 0 auto;
 }
 
+.pan-india {
+    color: var(--accent-purple);
+}
+
 /* ==========================
    Section Spacing
 ========================== */
@@ -397,15 +401,23 @@ section {
     box-shadow: none;
 }
 
-.btn-primary {
-    background: var(--soft-gradient);
+.btn-primary:hover {
+    opacity: 0.95;
+}
+
+.fbutton {
+    background: #FF6B35;
     border: none;
     font-weight: 600;
     letter-spacing: 0.4px;
 }
 
-.btn-primary:hover {
-    opacity: 0.95;
+.fbutton:hover {
+    background: #FF6B35;
+}
+
+.small-text-mobile {
+    font-size: 0.9em;
 }
 
 /* ==========================
