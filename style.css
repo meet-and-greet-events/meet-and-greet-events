@@ -146,6 +146,16 @@ h6,
     .home-hero {
         padding-top: 128px;
     }
+
+    .small-text-mobile {
+        font-size: 0.7em;
+    }
+
+    .hero-logo {
+        display: block !important;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
 }
 
 /* ===============================
@@ -189,6 +199,7 @@ h6,
     max-width: 650px;
     margin: 0 auto;
 }
+
 
 .pan-india {
     color: var(--accent-purple);
@@ -416,9 +427,6 @@ section {
     background: #FF6B35;
 }
 
-.small-text-mobile {
-    font-size: 0.9em;
-}
 
 /* ==========================
    Footer
