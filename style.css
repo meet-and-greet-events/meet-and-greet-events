@@ -152,10 +152,9 @@ h6,
     }
 
     .hero-logo {
-        display: block !important;
         margin-top: 2em;
         margin-bottom: 2em;
-        background: ;
+        mix-blend-mode: multiply;
     }
 }
 
